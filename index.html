@@ -6357,7 +6357,16 @@ Overall, these findings suggest that there is no significant abnormality in nerv
       section.appendChild(ncsDiv);
 
       // ※ NCS 평가 영역은 제거됨
-
+      // Ground Truth 영역
+      const gtDiv = document.createElement('div');
+      gtDiv.className = 'ground-truth';
+      const gtTitle = document.createElement('h3');
+      gtTitle.textContent = 'Ground Truth';
+      gtDiv.appendChild(gtTitle);
+      const gtContent = document.createElement('p');
+      gtContent.textContent = qData.groundTruth;
+      gtDiv.appendChild(gtContent);
+      section.appendChild(gtDiv);
       // ----------------------------
       // (6-1-1) 추가 내용 영역 (각 rating item에 대해)
       // ----------------------------
